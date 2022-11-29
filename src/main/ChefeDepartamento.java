@@ -39,11 +39,12 @@ public class ChefeDepartamento {
         this.nome = nome;
     }
 
-    public List<Departamento> getDepartamentos() {
-        return departamentos;
-    }
-
-    public void setDepartamentos(List<Departamento> departamentos) {
-        this.departamentos = departamentos;
+    public String getDepartamentos() {
+        String saida = "";
+        saida = "Chefe : " + this.getNome() +"\n";
+        for (Departamento departamento : departamentos) {
+            saida += departamento.getInformacaoDepartamento();
+        }
+        return saida;
     }
 }
